@@ -1,0 +1,20 @@
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe.config
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.pdb
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.AssemblyReference.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.Form1.resources
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.Properties.Resources.resources
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.GenerateResource.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.exe
+C:\Users\Alan\Desktop\ProyectosMaxi\elevado-al-cubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.pdb
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe.config
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\bin\Debug\Elevadoalcubo.pdb
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.AssemblyReference.cache
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.Form1.resources
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.Properties.Resources.resources
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.GenerateResource.cache
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.CoreCompileInputs.cache
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.exe
+D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.pdb
