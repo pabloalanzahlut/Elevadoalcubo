@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido del método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
@@ -35,13 +35,13 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstHistorial = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBorrarUltimo = new System.Windows.Forms.Button();
+            this.btnFiltrarHistorial = new System.Windows.Forms.Button();
+            this.btnExportarHistorial = new System.Windows.Forms.Button();
+            this.btnGuardarHistorial = new System.Windows.Forms.Button();
+            this.btnBorrarTodo = new System.Windows.Forms.Button();
             this.lblresultado = new System.Windows.Forms.Label();
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnResta = new System.Windows.Forms.Button();
@@ -49,6 +49,8 @@
             this.btnPotencia = new System.Windows.Forms.Button();
             this.lblNumero2 = new System.Windows.Forms.Label();
             this.txtnumero2 = new System.Windows.Forms.TextBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.cmbTipoOperacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblNum1
@@ -130,17 +132,17 @@
             this.btnreset.UseVisualStyleBackColor = false;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
-            // listView1
+            // lstHistorial
             // 
-            this.listView1.BackColor = System.Drawing.Color.White;
-            this.listView1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(766, 65);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(297, 431);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstHistorial.BackColor = System.Drawing.Color.White;
+            this.lstHistorial.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lstHistorial.FormattingEnabled = true;
+            this.lstHistorial.ItemHeight = 24;
+            this.lstHistorial.Location = new System.Drawing.Point(766, 65);
+            this.lstHistorial.Name = "lstHistorial";
+            this.lstHistorial.Size = new System.Drawing.Size(297, 436);
+            this.lstHistorial.TabIndex = 8;
             // 
             // label1
             // 
@@ -152,70 +154,75 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Historial de Cálculos:";
             // 
-            // button1
+            // btnBorrarUltimo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(613, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 39);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Borrar Último";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBorrarUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.btnBorrarUltimo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnBorrarUltimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.btnBorrarUltimo.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarUltimo.Location = new System.Drawing.Point(613, 88);
+            this.btnBorrarUltimo.Name = "btnBorrarUltimo";
+            this.btnBorrarUltimo.Size = new System.Drawing.Size(147, 39);
+            this.btnBorrarUltimo.TabIndex = 10;
+            this.btnBorrarUltimo.Text = "Borrar Último";
+            this.btnBorrarUltimo.UseVisualStyleBackColor = false;
+            this.btnBorrarUltimo.Click += new System.EventHandler(this.btnBorrarUltimo_Click);
             // 
-            // button2
+            // btnFiltrarHistorial
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(613, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 39);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Filtrar Historial";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFiltrarHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.btnFiltrarHistorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnFiltrarHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.btnFiltrarHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnFiltrarHistorial.Location = new System.Drawing.Point(533, 306);
+            this.btnFiltrarHistorial.Name = "btnFiltrarHistorial";
+            this.btnFiltrarHistorial.Size = new System.Drawing.Size(147, 39);
+            this.btnFiltrarHistorial.TabIndex = 11;
+            this.btnFiltrarHistorial.Text = "Filtrar Historial";
+            this.btnFiltrarHistorial.UseVisualStyleBackColor = false;
+            this.btnFiltrarHistorial.Click += new System.EventHandler(this.btnFiltrarHistorial_Click);
             // 
-            // button3
+            // btnExportarHistorial
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(613, 199);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 39);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Exportar Historial";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnExportarHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.btnExportarHistorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnExportarHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.btnExportarHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnExportarHistorial.Location = new System.Drawing.Point(613, 199);
+            this.btnExportarHistorial.Name = "btnExportarHistorial";
+            this.btnExportarHistorial.Size = new System.Drawing.Size(147, 39);
+            this.btnExportarHistorial.TabIndex = 12;
+            this.btnExportarHistorial.Text = "Exportar Historial";
+            this.btnExportarHistorial.UseVisualStyleBackColor = false;
+            this.btnExportarHistorial.Click += new System.EventHandler(this.btnExportarHistorial_Click);
             // 
-            // button4
+            // btnGuardarHistorial
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(613, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 39);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Guardar Historial";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnGuardarHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.btnGuardarHistorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnGuardarHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.btnGuardarHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarHistorial.Location = new System.Drawing.Point(613, 249);
+            this.btnGuardarHistorial.Name = "btnGuardarHistorial";
+            this.btnGuardarHistorial.Size = new System.Drawing.Size(147, 39);
+            this.btnGuardarHistorial.TabIndex = 13;
+            this.btnGuardarHistorial.Text = "Guardar Historial";
+            this.btnGuardarHistorial.UseVisualStyleBackColor = false;
+            this.btnGuardarHistorial.Click += new System.EventHandler(this.btnGuardarHistorial_Click);
             // 
-            // button5
+            // btnBorrarTodo
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(613, 143);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 39);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Borrar Todo";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnBorrarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(173)))), ((int)(((byte)(226)))));
+            this.btnBorrarTodo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnBorrarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.btnBorrarTodo.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarTodo.Location = new System.Drawing.Point(613, 143);
+            this.btnBorrarTodo.Name = "btnBorrarTodo";
+            this.btnBorrarTodo.Size = new System.Drawing.Size(147, 39);
+            this.btnBorrarTodo.TabIndex = 14;
+            this.btnBorrarTodo.Text = "Borrar Todo";
+            this.btnBorrarTodo.UseVisualStyleBackColor = false;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // lblresultado
             // 
@@ -303,20 +310,41 @@
             this.txtnumero2.Size = new System.Drawing.Size(135, 26);
             this.txtnumero2.TabIndex = 1;
             // 
+            // txtFiltro
+            // 
+            this.txtFiltro.BackColor = System.Drawing.Color.White;
+            this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtFiltro.Location = new System.Drawing.Point(689, 313);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(71, 26);
+            this.txtFiltro.TabIndex = 16;
+            // 
+            // cmbTipoOperacion
+            // 
+            this.cmbTipoOperacion.FormattingEnabled = true;
+            this.cmbTipoOperacion.Location = new System.Drawing.Point(689, 354);
+            this.cmbTipoOperacion.Name = "cmbTipoOperacion";
+            this.cmbTipoOperacion.Size = new System.Drawing.Size(71, 36);
+            this.cmbTipoOperacion.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1126, 641);
+            this.Controls.Add(this.cmbTipoOperacion);
+            this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lblresultado);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBorrarTodo);
+            this.Controls.Add(this.btnGuardarHistorial);
+            this.Controls.Add(this.btnExportarHistorial);
+            this.Controls.Add(this.btnFiltrarHistorial);
+            this.Controls.Add(this.btnBorrarUltimo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstHistorial);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.lblResult);
@@ -345,15 +373,15 @@
         private System.Windows.Forms.TextBox txtnumero;
         private System.Windows.Forms.Button btnMultiplicacion;
         private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.Button btnsalir;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnreset;
+        private System.Windows.Forms.ListBox lstHistorial;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBorrarUltimo;
+        private System.Windows.Forms.Button btnFiltrarHistorial;
+        private System.Windows.Forms.Button btnExportarHistorial;
+        private System.Windows.Forms.Button btnGuardarHistorial;
+        private System.Windows.Forms.Button btnBorrarTodo;
         private System.Windows.Forms.Label lblresultado;
         private System.Windows.Forms.Button btnDivision;
         private System.Windows.Forms.Button btnResta;
@@ -361,6 +389,7 @@
         private System.Windows.Forms.Button btnPotencia;
         private System.Windows.Forms.Label lblNumero2;
         private System.Windows.Forms.TextBox txtnumero2;
+        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.ComboBox cmbTipoOperacion;
     }
 }
-

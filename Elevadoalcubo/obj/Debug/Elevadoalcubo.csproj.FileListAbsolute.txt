@@ -18,3 +18,13 @@ D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\
 D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.CoreCompileInputs.cache
 D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.exe
 D:\Elevado al cubo Proyecto con alan\Elevadoalcubo-main\Elevadoalcubo\obj\Debug\Elevadoalcubo.pdb
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe.config
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.exe
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\bin\Debug\Elevadoalcubo.pdb
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.AssemblyReference.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.Form1.resources
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.Properties.Resources.resources
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.GenerateResource.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.exe
+C:\Users\Alan\Desktop\ProyectosMaxi\Elevadoalcubo\Elevadoalcubo\obj\Debug\Elevadoalcubo.pdb
