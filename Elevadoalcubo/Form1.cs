@@ -425,42 +425,46 @@ namespace Elevadoalcubo
         {
             // Limpiar la lista de historial
             lstHistorial.Items.Clear();
-
-            // Filtrar el historial por el tipo de operación seleccionado y el valor de filtro
-            foreach (string item in historial)
-            {
-                // Verificar si el tipo de operación del elemento del historial coincide con el tipo seleccionado
-                if (item.Contains(tipoOperacion))
+                // Filtrar el historial por el tipo de operación seleccionado y el valor de filtro
+                foreach (string item in historial)
                 {
-                    // Dividir el item en partes para obtener los números y el resultado, y compararlos con el valor de filtro
-                    string[] partes = item.Split('=');
-                    if (partes.Length == 2)
+                    // Verificar si el tipo de operación del elemento del historial coincide con el tipo seleccionado
+                    if (item.Contains(tipoOperacion) && item.Contains(valorFiltro.ToString()))
                     {
-                        string operacion = partes[0].Trim();
-                        string[] numeros = operacion.Split(new[] { '+', '-', '*', '/' }, StringSplitOptions.RemoveEmptyEntries);
-                        List<double> valores = new List<double>();
-                        foreach (string numero in numeros)
+                        // Dividir el item en partes para obtener los números y el resultado, y compararlos con el valor de filtro
+                        string[] partes = item.Split('=');
+                        if (partes.Length == 2)
                         {
-                            if (double.TryParse(numero.Trim(), out double valorNumero))
+                            string operacion = partes[0].Trim();
+                            string[] numeros = operacion.Split(new[] { '+', '-', '*', '/' }, StringSplitOptions.RemoveEmptyEntries);
+                            List<double> valores = new List<double>();
+                            foreach (string numero in numeros)
                             {
-                                valores.Add(valorNumero);
-                            }
-                        }
-                        if (valores.Count > 0)
-                        {
-                            double resultado;
-                            if (double.TryParse(partes[1].Trim(), out resultado))
-                            {
-                                // Si el resultado o alguno de los números de la operación es mayor que el valor de filtro, agregar al historial
-                                if (resultado > valorFiltro || valores.Any(v => v > valorFiltro))
+                                if (double.TryParse(numero.Trim(), out double valorNumero))
                                 {
-                                    lstHistorial.Items.Add(item);
+                                    valores.Add(valorNumero);
+                                }
+                            }
+                            if (valores.Count > 0)
+                            {
+                                double resultado;
+                                if (double.TryParse(partes[1].Trim(), out resultado))
+                                {
+                                    // Si el resultado o alguno de los números de la operación es mayor que el valor de filtro, agregar al historial
+                                    if (resultado > valorFiltro || valores.Any(v => v > valorFiltro))
+                                    {
+                                        lstHistorial.Items.Add(item);
+                                    }
                                 }
                             }
                         }
-                    }
+                    }  
                 }
-            }
+                if (lstHistorial.Items.Count == 0)
+                {
+                    MessageBox.Show($"Error al filtrar el historial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
         }
 
     }
