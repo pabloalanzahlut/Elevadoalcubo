@@ -430,7 +430,7 @@ namespace Elevadoalcubo
             foreach (string item in historial)
             {
                 // Verificar si el tipo de operación del elemento del historial coincide con el tipo seleccionado
-                if (item.Contains(tipoOperacion))
+                if (item.Contains(tipoOperacion) && item.Contains(valorFiltro.ToString()))
                 {
                     // Dividir el item en partes para obtener los números y el resultado, y compararlos con el valor de filtro
                     string[] partes = item.Split('=');
@@ -460,6 +460,12 @@ namespace Elevadoalcubo
                         }
                     }
                 }
+            }
+            //Emite mensaje de error si no encuentra valor numérico en el filtro
+            if (lstHistorial.Items.Count == 0)
+            {
+                MessageBox.Show($"Error al filtrar el historial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
